@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>邓浩斌 · 新媒体运营个人简历</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f4bc0'/%3E%3Cpath d='M8 11h16M8 16h16M8 21h10' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#f4f6fb; --card:#ffffff; --ink:#1d2536; --ink2:#5c6577;
+    --line:#e5e9f2; --brand:#2f4bc0; --brand-d:#24398f; --brand-soft:#eef1fe;
+    --ok:#0e9f6e; --chip:#f0f3fa;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+       background:var(--bg); color:var(--ink); line-height:1.7; font-size:16px;}
+  .wrap{max-width:940px; margin:0 auto; padding:0 20px;}
+
+  /* ===== 顶栏导航 ===== */
+  nav.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.94); backdrop-filter:blur(8px);
+       border-bottom:1px solid var(--line);}
+  .top-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0;}
+  .top-inner .logo{font-weight:800; color:var(--brand); letter-spacing:.5px;}
+  .top-links{display:flex; gap:6px;}
+  .top-links a{color:var(--ink2); text-decoration:none; font-size:14px; padding:5px 12px; border-radius:8px; transition:.15s;}
+  .top-links a:hover{background:var(--brand-soft); color:var(--brand-d);}
+
+  /* ===== 个人信息区 ===== */
+  header.profile{background:linear-gradient(135deg,#24398f 0%,#2f4bc0 60%,#4a63cf 100%); color:#fff;
+       padding:52px 0 46px; position:relative; overflow:hidden;}
+  header.profile::after{content:""; position:absolute; right:-70px; top:-70px; width:280px; height:280px;
+       background:radial-gradient(circle,rgba(255,255,255,.14),transparent 65%);}
+  .profile-inner{position:relative; z-index:1;}
+  .profile .name{font-size:34px; font-weight:800; letter-spacing:1px;}
+  .profile .want{display:inline-block; margin-top:10px; font-size:16px; background:rgba(255,255,255,.16);
+       border:1px solid rgba(255,255,255,.3); padding:4px 14px; border-radius:999px;}
+  .profile .contact{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px;}
+  .profile .contact a{color:#fff; text-decoration:none; font-size:14px; background:rgba(255,255,255,.12);
+       border:1px solid rgba(255,255,255,.22); padding:5px 13px; border-radius:999px; transition:.15s;}
+  .profile .contact a:hover{background:rgba(255,255,255,.24);}
+  .profile .contact .tag{color:#fff; opacity:.9; font-size:14px; background:rgba(255,255,255,.12);
+       border:1px solid rgba(255,255,255,.22); padding:5px 13px; border-radius:999px;}
+
+  /* ===== 章节通用 ===== */
+  section.sec{padding:40px 0 8px;}
+  .sec-head{display:flex; align-items:center; gap:12px; margin-bottom:22px;}
+  .sec-head .bar{width:5px; height:24px; border-radius:3px; background:var(--brand);}
+  .sec-head h2{font-size:22px; font-weight:800;}
+  .sec-head .en{font-size:12.5px; color:var(--ink2); margin-left:2px; letter-spacing:1px;}
+
+  /* 一句话概述 */
+  .summary{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 26px;
+       font-size:15.5px; color:#2a3347; box-shadow:0 1px 2px rgba(30,42,70,.04);}
+
+  /* 技能 */
+  .skills{display:grid; grid-template-columns:1fr; gap:14px;}
+  .skill-card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px;}
+  .skill-card h3{font-size:15px; font-weight:700; color:var(--brand-d); margin-bottom:10px; display:flex; align-items:center; gap:8px;}
+  .skill-card h3 .ico{width:18px; height:18px; flex:none;}
+  .skill-card p{font-size:14.5px; color:#3a4356;}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;}
+  .chip{background:var(--chip); border:1px solid var(--line); color:#43506a; font-size:13px;
+       padding:3px 12px; border-radius:999px;}
+
+  /* ===== 项目经历 STAR ===== */
+  .proj{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px 26px; margin-bottom:20px;}
+  .proj-head{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px; margin-bottom:4px;}
+  .proj-head h3{font-size:18px; font-weight:700;}
+  .proj-head .time{font-size:13.5px; color:var(--ink2);}
+  .proj .role{font-size:14px; color:var(--brand); font-weight:600; margin-bottom:12px;}
+  .star{display:grid; grid-template-columns:1fr; gap:10px;}
+  .star .s{font-size:14.5px; line-height:1.7;}
+  .star .s b{color:var(--brand-d); font-weight:700; margin-right:8px;}
+  .star .s ul{margin:4px 0 0 20px;}
+  .star .s li{margin-bottom:5px;}
+
+  /* ===== 作品集 ===== */
+  .works{display:grid; grid-template-columns:1fr; gap:14px;}
+  .work{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px;}
+  .work h3{font-size:15.5px; font-weight:700; margin-bottom:8px; display:flex; align-items:center; gap:8px;}
+  .work h3 .ico{width:18px; height:18px; flex:none; color:var(--brand);}
+  .work .desc{font-size:14px; color:#3a4356; margin-bottom:10px;}
+  .work .nums{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+  .work .num{background:var(--brand-soft); border:1px solid #d8e0fb; border-radius:10px; padding:10px 14px; text-align:center;}
+  .work .num .v{font-size:20px; font-weight:800; color:var(--brand);}
+  .work .num .k{font-size:12px; color:var(--ink2); margin-top:2px;}
+
+  /* ===== 教育背景 ===== */
+  .edu{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 26px;}
+  .edu-head{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px;}
+  .edu-head h3{font-size:17px; font-weight:700;}
+  .edu-head .time{font-size:13.5px; color:var(--ink2);}
+  .edu p{font-size:14.5px; color:#3a4356; margin-top:10px;}
+
+  /* ===== 证书&说明 ===== */
+  .cert{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 26px;}
+  .cert ul{margin:8px 0 0 20px; color:#3a4356; font-size:14.5px;}
+  .cert li{margin-bottom:6px;}
+  .cert .cta{margin-top:14px; display:inline-flex; align-items:center; gap:8px; background:var(--brand); color:#fff;
+       text-decoration:none; padding:10px 22px; border-radius:10px; font-weight:700; transition:.15s;}
+  .cert .cta:hover{background:var(--brand-d);}
+
+  /* ===== 个人信息区 · 头像 ===== */
+  .profile-flex{display:flex; align-items:center; justify-content:space-between; gap:28px;}
+  .profile-text{flex:1; min-width:0;}
+  .profile-avatar{flex:none;}
+  .avatar-ring{width:128px; height:128px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+       background:rgba(255,255,255,.16); border:3px solid rgba(255,255,255,.55); box-shadow:0 8px 26px rgba(0,0,0,.22); overflow:hidden;}
+  .avatar-ring img{width:100%; height:100%; object-fit:cover; display:block;}
+  .avatar-initial{font-size:50px; font-weight:800; color:#fff; line-height:1;}
+
+  /* ===== 作品卡：可点击入口 ===== */
+  .work{text-decoration:none; color:inherit; display:block; cursor:pointer; transition:.18s;}
+  .work:hover{border-color:var(--brand); box-shadow:0 6px 20px rgba(47,75,192,.14); transform:translateY(-2px);}
+  .work .more{display:inline-flex; align-items:center; gap:5px; margin-top:12px; font-size:13px; color:var(--brand); font-weight:600;}
+
+  /* ===== 详情页 ===== */
+  .detail-view{display:none; padding:40px 0 12px;}
+  .back-link{display:inline-flex; align-items:center; gap:8px; color:var(--brand); text-decoration:none;
+       font-weight:700; font-size:14px; margin-bottom:18px;}
+  .back-link:hover{text-decoration:underline;}
+  .detail-title{font-size:28px; font-weight:800; margin-bottom:6px;}
+  .detail-sub{color:var(--ink2); font-size:14.5px; margin-bottom:26px;}
+  .detail-card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px 26px; margin-bottom:18px;}
+  .detail-card h3{font-size:17px; font-weight:700; color:var(--brand-d); margin-bottom:12px;}
+  .detail-card p{margin-bottom:10px; color:#2a3347; font-size:15px;}
+  .detail-card ul{margin:4px 0 10px 20px; color:#2a3347; font-size:15px;}
+  .detail-card li{margin-bottom:7px;}
+  .di-note{background:var(--brand-soft); border-left:4px solid var(--brand); border-radius:8px;
+       padding:12px 16px; font-size:14px; color:#2f4bc0; margin-top:12px;}
+  .nums{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;}
+  .num{background:var(--brand-soft); border:1px solid #d8e0fb; border-radius:10px; padding:10px 16px; text-align:center;}
+  .num .v{font-size:20px; font-weight:800; color:var(--brand);}
+  .num .k{font-size:12px; color:var(--ink2); margin-top:2px;}
+  .tbl-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch; margin:6px 0;}
+  table.tbl{width:100%; border-collapse:collapse; font-size:14px; min-width:420px;}
+  table.tbl th, table.tbl td{border:1px solid var(--line); padding:9px 12px; text-align:left;}
+  table.tbl th{background:#f2f5fb; color:var(--brand-d); font-weight:700;}
+
+  /* ===== 页脚 ===== */
+  footer.site{background:#161e30; color:#9fb0d0; padding:28px 0; margin-top:48px; text-align:center; font-size:13.5px;}
+
+  @media(min-width:768px){
+    .skills{grid-template-columns:repeat(2,1fr);}
+    .works{grid-template-columns:repeat(2,1fr);}
+  }
+  @media(max-width:720px){
+    body{font-size:15px;}
+    .profile .name{font-size:27px;}
+    .wrap{padding:0 16px;}
+    .proj, .edu, .cert, .summary{padding:18px 18px;}
+    .profile-flex{gap:16px;}
+    .avatar-ring{width:88px; height:88px;}
+    .avatar-initial{font-size:34px;}
+    .detail-title{font-size:23px;}
+    .detail-card{padding:18px 18px;}
+  }
+</style>
+</head>
+<body>
+
+<div id="homeView">
+
+<nav class="top">
+  <div class="wrap top-inner">
+    <span class="logo">邓浩斌 · 简历</span>
+    <div class="top-links">
+      <a href="#summary">概述</a>
+      <a href="#skills">技能</a>
+      <a href="#projects">项目</a>
+      <a href="#works">作品集</a>
+      <a href="#edu">教育</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== 个人信息区 ===== -->
+<header class="profile">
+  <div class="wrap profile-inner">
+    <div class="profile-flex">
+      <div class="profile-text">
+        <h1 class="name">邓浩斌</h1>
+        <span class="want">求职意向：新媒体运营（服饰鞋帽 · 小红书/抖音方向）</span>
+        <div class="contact">
+          <span class="tag">电话：【18177421406】</span>
+          <span class="tag">邮箱：【2199537244@qq.com】</span>
+          <a href="#works">作品集直达</a>
+        </div>
+      </div>
+      <div class="profile-avatar">
+        <!-- 用真实照片：删掉下面 avatar-ring 内的 span，改成 <img src="头像.jpg" alt="个人头像"> 即可 -->
+        <div class="avatar-ring"><img src="头像.jpg" alt="个人头像"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===== 求职概述 ===== -->
+  <section class="sec" id="summary">
+    <div class="sec-head"><span class="bar"></span><h2>个人概述</h2><span class="en">SUMMARY</span></div>
+    <div class="summary">
+      电子商务本科，熟悉小红书、抖音平台规则与服饰赛道内容逻辑；<b>有服饰穿搭账号实操运营经验</b>，
+      能独立完成选题策划、种草图文撰写、数据复盘与达人对接；以粉丝增长、内容传播、商品种草转化为目标
+      持续优化账号内容，有可点击的作品集与真实账号数据支撑。
+    </div>
+  </section>
+
+  <!-- ===== 核心技能 ===== -->
+  <section class="sec" id="skills">
+    <div class="sec-head"><span class="bar"></span><h2>核心技能</h2><span class="en">SKILLS</span></div>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg>
+          平台运营
+        </h3>
+        <p>小红书 / 抖音账号全链路运营、月度内容规划、粉丝互动活动策划、热点内容创作</p>
+      </div>
+      <div class="skill-card">
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+          文案能力
+        </h3>
+        <p>种草图文脚本、商品详情文案、品牌传播文案撰写，图文排版编辑</p>
+      </div>
+      <div class="skill-card">
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          数据分析
+        </h3>
+        <p>后台流量 / 互动 / 投放数据复盘、结案报告输出、内容优化方案迭代</p>
+      </div>
+      <div class="skill-card">
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          达人合作
+        </h3>
+        <p>达人筛选、对接沟通、投放跟进、新媒体资源库搭建与维护</p>
+      </div>
+    </div>
+    <div class="chips" style="margin-top:14px;">
+      <span class="chip">剪映</span><span class="chip">Canva 可画</span><span class="chip">秀米</span><span class="chip">Excel 透视表</span><span class="chip">飞书文档</span>
+    </div>
+  </section>
+
+  <!-- ===== 项目经历（STAR） ===== -->
+  <section class="sec" id="projects">
+    <div class="sec-head"><span class="bar"></span><h2>项目经历</h2><span class="en">PROJECTS</span></div>
+
+    <div class="proj">
+      <div class="proj-head"><h3>服饰穿搭类小红书账号</h3><span class="time">2024.03 – 至今</span></div>
+      <div class="role">个人自媒体运营</div>
+      <div class="star">
+        <p class="s"><b>场景</b>在校期间从零搭建女装穿搭种草小红书账号，用于练习平台内容逻辑，并沉淀新媒体作品集。</p>
+        <p class="s"><b>任务</b>独立负责账号内容规划与日常运营，稳定涨粉、产出爆款笔记，形成可复用方法论。</p>
+        <div class="s"><b>行动</b>
+          <ul>
+            <li>调研 20+ 同赛道对标账号，确定"小个子穿搭"细分定位，制定周更 3 篇的内容排期</li>
+            <li>独立完成选品、拍照、修图、文案全流程，累计发布 80+ 篇原创穿搭图文，形成统一封面与标题模板</li>
+            <li>每周复盘曝光 / 收藏 / 涨粉数据，验证选题与封面表现，持续淘汰低效内容</li>
+            <li>策划"穿搭投票""同款征集"等互动活动，维护评论区，提升账号活跃度</li>
+          </ul>
+        </div>
+        <p class="s"><b>结果</b>从 0 积累粉丝【2600+，自然流量占 90%】，打造【4】篇千赞笔记，沉淀【40+】选题库与封面模板。</p>
+      </div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-head"><h3>新媒体运营实习生</h3><span class="time">2025.06 – 2025.10</span></div>
+      <div class="role">桂林 XX 服饰电商有限公司</div>
+      <div class="star">
+        <p class="s"><b>场景</b>品牌主攻抖音 + 小红书双平台，账号涨粉处于瓶颈期，需要人承接内容策划与数据优化。</p>
+        <p class="s"><b>任务</b>独立负责小红书图文运营，配合上新种草推广，协助跟进 3 位穿搭达人合作。</p>
+        <div class="s"><b>行动</b>
+          <ul>
+            <li>追踪穿搭热点，每周产出 4–6 篇图文笔记，独立完成选题、撰写、排版；同步撰写商品详情文案与种草脚本</li>
+            <li>每周导出曝光、点赞、收藏、进店引流数据，用 Excel 整理复盘，据此调整选题与封面</li>
+            <li>协助筛选匹配的穿搭达人，负责沟通、排期与素材对接，跟进投放数据，整理达人资源表</li>
+            <li>与拍摄、设计团队对齐内容需求，维护评论区，提升账号活跃度</li>
+          </ul>
+        </div>
+        <p class="s"><b>结果</b>粉丝增长约【4200】（+35%），打造 3 篇收藏过千的爆款笔记，互动率从 4.2% 提升至 7.8%，沉淀 20 位可复用达人资源。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 作品集 ===== -->
+  <section class="sec" id="works">
+    <div class="sec-head"><span class="bar"></span><h2>作品集</h2><span class="en">PORTFOLIO</span></div>
+    <div class="works">
+      <a class="work" href="#work-xhs">
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          小红书图文案例
+        </h3>
+        <p class="desc">多篇原创穿搭种草笔记，含封面设计、标题与文案，可直接查看完整图文。</p>
+        <div class="nums">
+          <div class="num"><div class="v">80+</div><div class="k">发布笔记</div></div>
+          <div class="num"><div class="v">4</div><div class="k">千赞笔记</div></div>
+          <div class="num"><div class="v">90%</div><div class="k">自然流量</div></div>
+        </div>
+        <span class="more">查看完整案例 →</span>
+      </a>
+      <a class="work" href="#work-copy">
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          商品详情文案
+        </h3>
+        <p class="desc">为服饰新品撰写的详情页文案样稿，突出卖点与用户场景。</p>
+        <div class="nums">
+          <div class="num"><div class="v">10+</div><div class="k">详情文案</div></div>
+          <div class="num"><div class="v">900</div><div class="k">单篇最高进店</div></div>
+        </div>
+        <span class="more">查看文案样稿 →</span>
+      </a>
+      <a class="work" href="#work-data">
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          数据复盘表
+        </h3>
+        <p class="desc">账号月度运营复盘文档，含数据拆解与内容优化建议。</p>
+        <div class="nums">
+          <div class="num"><div class="v">7.8%</div><div class="k">互动率</div></div>
+          <div class="num"><div class="v">40+</div><div class="k">选题库</div></div>
+        </div>
+        <span class="more">查看复盘表 →</span>
+      </a>
+      <a class="work" href="#work-kol">
+        <h3>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          达人资源库
+        </h3>
+        <p class="desc">整理的穿搭赛道达人资源表，含账号、粉丝量、合作效果备注。</p>
+        <div class="nums">
+          <div class="num"><div class="v">20</div><div class="k">合作达人</div></div>
+        </div>
+        <span class="more">查看资源表 →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 教育背景 ===== -->
+  <section class="sec" id="edu">
+    <div class="sec-head"><span class="bar"></span><h2>教育背景</h2><span class="en">EDUCATION</span></div>
+    <div class="edu">
+      <div class="edu-head"><h3>桂林【XX】大学 · 电子商务专业</h3><span class="time">2023 – 2027</span></div>
+      <p>主修：网络营销、新媒体营销、消费者行为学、电商运营。课程内独立完成电商品牌新媒体传播策划案，掌握品牌内容营销全流程方法。</p>
+    </div>
+  </section>
+
+  <!-- ===== 证书与作品集说明 ===== -->
+  <section class="sec">
+    <div class="sec-head"><span class="bar"></span><h2>荣誉证书与作品集</h2><span class="en">CERTIFICATES</span></div>
+    <div class="cert">
+      <ul>
+        <li>【校级新媒体 / 电商竞赛奖项，没有可删除此项】</li>
+        <li>作品集包含：小红书图文案例、商品详情文案样稿、数据复盘表、达人资源表</li>
+      </ul>
+      <a class="cta" href="#works">查看完整作品集</a>
+    </div>
+  </section>
+
+</main>
+
+</div><!-- /homeView -->
+
+<!-- ===== 详情页视图（hash 路由切换） ===== -->
+
+<!-- 详情：小红书图文案例 -->
+<section class="wrap detail-view" id="work-xhs" data-view="work-xhs">
+  <a class="back-link" href="#works">← 返回作品集</a>
+  <h2 class="detail-title">小红书图文案例</h2>
+  <p class="detail-sub">服饰穿搭赛道 · 从封面、标题到正文的完整图文拆解</p>
+  <div class="detail-card">
+    <h3>选题与内容策略</h3>
+    <ul>
+      <li>确定"小个子穿搭"细分定位，聚焦通勤、显高、显瘦三类高频需求</li>
+      <li>每周固定更新 3 篇，保持账号活跃与标签稳定</li>
+      <li>结合当季热点（换季穿搭、节日出街）提前 1 周储备选题</li>
+    </ul>
+  </div>
+  <div class="detail-card">
+    <h3>封面与标题写法</h3>
+    <p>封面统一使用"人物 + 大字号卖点"结构，标题采用"场景 + 痛点 + 结果"三段式，例如：</p>
+    <ul>
+      <li>「155cm 小个子｜3 套通勤穿搭 显高不踩雷」</li>
+      <li>「梨形身材救星｜这条裙子藏胯又显腿长」</li>
+      <li>「换季不用买｜5 件基础款的 7 种搭法」</li>
+    </ul>
+  </div>
+  <div class="detail-card">
+    <h3>数据表现</h3>
+    <div class="nums">
+      <div class="num"><div class="v">80+</div><div class="k">发布笔记</div></div>
+      <div class="num"><div class="v">4</div><div class="k">千赞笔记</div></div>
+      <div class="num"><div class="v">90%</div><div class="k">自然流量</div></div>
+    </div>
+    <p class="di-note">这里是示例内容。替换成你自己的真实案例截图与文案即可，HR 点开就能看到你的作品。</p>
+  </div>
+</section>
+
+<!-- 详情：商品详情文案 -->
+<section class="wrap detail-view" id="work-copy" data-view="work-copy">
+  <a class="back-link" href="#works">← 返回作品集</a>
+  <h2 class="detail-title">商品详情文案</h2>
+  <p class="detail-sub">服饰新品详情页文案样稿 · 突出卖点与使用场景</p>
+  <div class="detail-card">
+    <h3>文案结构</h3>
+    <ul>
+      <li>开头一句话抓痛点：先说用户关心的穿着问题</li>
+      <li>中段讲版型/面料/工艺，用可感知的细节代替空话</li>
+      <li>结尾给搭配建议与场景，降低购买决策门槛</li>
+    </ul>
+  </div>
+  <div class="detail-card">
+    <h3>样稿示例</h3>
+    <p><b>标题：</b>一条能穿三季的高腰阔腿裤，小个子也能穿出大长腿。</p>
+    <p><b>卖点：</b>高腰设计拉长比例；垂感面料修饰腿型；松紧腰不勒肚；通勤、约会、出街都能穿。</p>
+    <p><b>场景：</b>配针织衫是温柔通勤风，配卫衣是休闲出街风，一条裤子覆盖一整周。</p>
+    <p class="di-note">示例文案，替换为你真实写过的详情页文案。</p>
+  </div>
+</section>
+
+<!-- 详情：数据复盘表 -->
+<section class="wrap detail-view" id="work-data" data-view="work-data">
+  <a class="back-link" href="#works">← 返回作品集</a>
+  <h2 class="detail-title">数据复盘表</h2>
+  <p class="detail-sub">账号月度运营复盘 · 数据拆解与内容优化建议</p>
+  <div class="detail-card">
+    <h3>复盘维度</h3>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <tr><th>指标</th><th>本月</th><th>上月</th><th>变化</th><th>结论</th></tr>
+        <tr><td>曝光量</td><td>32w</td><td>24w</td><td>+33%</td><td>封面优化有效</td></tr>
+        <tr><td>互动率</td><td>7.8%</td><td>4.2%</td><td>+3.6pct</td><td>标题钩子起作用</td></tr>
+        <tr><td>收藏</td><td>1350</td><td>620</td><td>+118%</td><td>干货型内容更受欢迎</td></tr>
+        <tr><td>涨粉</td><td>1800</td><td>900</td><td>+100%</td><td>定位更聚焦</td></tr>
+      </table>
+    </div>
+    <p class="di-note">示例数据。替换成你真实的后台复盘截图或表格。</p>
+  </div>
+  <div class="detail-card">
+    <h3>优化建议</h3>
+    <ul>
+      <li>继续沿用高互动的"干货 + 场景"选题结构</li>
+      <li>低效的纯摆拍内容降低更新比例</li>
+      <li>把收藏过千的笔记拆成系列，形成稳定内容线</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 详情：达人资源库 -->
+<section class="wrap detail-view" id="work-kol" data-view="work-kol">
+  <a class="back-link" href="#works">← 返回作品集</a>
+  <h2 class="detail-title">达人资源库</h2>
+  <p class="detail-sub">穿搭赛道达人资源表 · 账号、粉丝量与合作效果备注</p>
+  <div class="detail-card">
+    <h3>资源表示例</h3>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <tr><th>账号</th><th>赛道</th><th>粉丝量</th><th>合作形式</th><th>效果备注</th></tr>
+        <tr><td>@小个子穿搭X</td><td>小个子/通勤</td><td>2.4w</td><td>图文种草</td><td>互动好，评论区转化高</td></tr>
+        <tr><td>@梨形救星Y</td><td>梨形身材</td><td>1.1w</td><td>置换合作</td><td>粉丝精准，适合新品测试</td></tr>
+        <tr><td>@换季衣橱Z</td><td>基础款搭配</td><td>5.8w</td><td>付费投放</td><td>曝光高，适合做主推爆款</td></tr>
+      </table>
+    </div>
+    <p class="di-note">示例数据。替换成你真实整理、对接过的达人资源表。</p>
+  </div>
+  <div class="detail-card">
+    <h3>合作流程</h3>
+    <ul>
+      <li>筛选匹配赛道的达人，记录粉丝量、报价、历史数据</li>
+      <li>沟通合作形式与排期，确认素材要求与发布时间</li>
+      <li>投放后跟进数据，回填效果备注，沉淀可复用资源</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">邓浩斌 · 新媒体运营（服饰鞋帽）&nbsp;|&nbsp; 作品与数据可在上方作品集查看</div>
+</footer>
+
+<script>
+  // ===== 作品详情页 hash 路由 =====
+  (function () {
+    var homeView = document.getElementById('homeView');
+    var detailViews = document.querySelectorAll('.detail-view');
+
+    function render() {
+      var hash = location.hash.replace('#', '');
+      var target = null;
+      if (hash) {
+        target = document.querySelector('.detail-view[data-view="' + hash + '"]');
+      }
+      detailViews.forEach(function (v) { v.style.display = 'none'; });
+
+      if (target) {
+        homeView.style.display = 'none';
+        target.style.display = 'block';
+      } else {
+        homeView.style.display = '';
+      }
+    }
+
+    window.addEventListener('hashchange', render);
+    render();
+  })();
+</script>
+
+</body>
+</html>
